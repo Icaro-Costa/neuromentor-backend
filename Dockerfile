@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
-COPY NeuroMentor.Api.csproj .
-RUN dotnet restore
 COPY . .
 RUN dotnet publish NeuroMentor.Api.csproj -c Release -o out
 
